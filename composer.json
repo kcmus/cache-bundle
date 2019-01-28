@@ -1,5 +1,5 @@
 {
-    "name":         "aequasi/cache-bundle",
+    "name":         "kcmus/cache-bundle",
     "type":         "library",
     "description":  "Creates services in Symfony 2, for cache, that can also be used with doctrines three cache types. It also provides functionality for session handler support, and Router support.",
     "keywords":     [
