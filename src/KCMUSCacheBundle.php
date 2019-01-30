@@ -13,11 +13,11 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use KCMUS\Bundle\CacheBundle\DependencyInjection\Compiler;
 
 /**
- * Class AequasiCacheBundle
+ * Class KCMUSCacheBundle
  *
  * @author Aaron Scherer <aequasi@gmail.com>
  */
-class AequasiCacheBundle extends Bundle
+class KCMUSCacheBundle extends Bundle
 {
     /**
      * {@inheritDoc}
