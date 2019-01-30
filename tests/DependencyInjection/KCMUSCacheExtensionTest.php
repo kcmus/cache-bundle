@@ -11,11 +11,11 @@ namespace KCMUS\Bundle\CacheBundle\Tests\DependencyInjection;
 use KCMUS\Bundle\CacheBundle\Tests\TestCase;
 
 /**
- * Class AequasiCacheExtensionTest
+ * Class KCMUSCacheExtensionTest
  *
  *
  */
-class AequasiCacheExtensionTest extends TestCase
+class KCMUSCacheExtensionTest extends TestCase
 {
 
     /**
@@ -35,7 +35,7 @@ class AequasiCacheExtensionTest extends TestCase
             $this->assertTrue($container->hasAlias($this->getAlias() . '.' . $type));
 
             $this->assertInstanceOf(
-                'Aequasi\Bundle\CacheBundle\Service\CacheService',
+                'KCMUS\Bundle\CacheBundle\Service\CacheService',
                 $container->get($this->getAlias() . '.instance.' . $type)
             );
             $this->assertInstanceOf(
@@ -69,7 +69,7 @@ class AequasiCacheExtensionTest extends TestCase
         $this->assertTrue($config['enabled']);
         $this->assertEquals($config['instance'], 'default');
 
-        $this->assertEquals('Aequasi\Bundle\CacheBundle\Routing\Router', $container->getParameter('router.class'));
+        $this->assertEquals('KCMUS\Bundle\CacheBundle\Routing\Router', $container->getParameter('router.class'));
     }
 
     /**
