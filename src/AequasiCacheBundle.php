@@ -10,7 +10,7 @@ namespace KCMUS\Bundle\CacheBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Aequasi\Bundle\CacheBundle\DependencyInjection\Compiler;
+use KCMUS\Bundle\CacheBundle\DependencyInjection\Compiler;
 
 /**
  * Class AequasiCacheBundle

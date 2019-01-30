@@ -9,7 +9,7 @@
 namespace KCMUS\Bundle\CacheBundle\Routing\Matcher;
 
 use Symfony\Component\Routing\Matcher\UrlMatcher;
-use Aequasi\Bundle\CacheBundle\Service\CacheService;
+use KCMUS\Bundle\CacheBundle\Service\CacheService;
 
 /**
  * Class CacheUrlMatcher

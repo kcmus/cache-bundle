@@ -8,7 +8,7 @@
 
 namespace KCMUS\Bundle\CacheBundle\DataCollector;
 
-use Aequasi\Bundle\CacheBundle\Service\CacheService;
+use KCMUS\Bundle\CacheBundle\Service\CacheService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;

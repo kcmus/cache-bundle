@@ -8,7 +8,7 @@
 
 namespace KCMUS\Bundle\CacheBundle\Tests\DependencyInjection;
 
-use Aequasi\Bundle\CacheBundle\Tests\TestCase;
+use KCMUS\Bundle\CacheBundle\Tests\TestCase;
 
 /**
  * Class AequasiCacheExtensionTest

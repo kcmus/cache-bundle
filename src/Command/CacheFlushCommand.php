@@ -9,7 +9,7 @@
 namespace KCMUS\Bundle\CacheBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
-use Aequasi\Bundle\CacheBundle\Service\CacheService;
+use KCMUS\Bundle\CacheBundle\Service\CacheService;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;

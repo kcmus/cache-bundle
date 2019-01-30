@@ -8,7 +8,7 @@
 
 namespace KCMUS\Bundle\CacheBundle\Tests;
 
-use Aequasi\Bundle\CacheBundle\DependencyInjection\AequasiCacheExtension;
+use KCMUS\Bundle\CacheBundle\DependencyInjection\AequasiCacheExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;

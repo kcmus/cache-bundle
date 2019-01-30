@@ -8,11 +8,11 @@
 
 namespace KCMUS\Bundle\CacheBundle\Routing;
 
-use Aequasi\Bundle\CacheBundle\Routing\Matcher\CacheUrlMatcher;
+use KCMUS\Bundle\CacheBundle\Routing\Matcher\CacheUrlMatcher;
 use Symfony\Bundle\FrameworkBundle\Routing\Router as BaseRouter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Routing\RequestContext;
-use Aequasi\Bundle\CacheBundle\Service\CacheService;
+use KCMUS\Bundle\CacheBundle\Service\CacheService;
 
 /**
  * Class Router

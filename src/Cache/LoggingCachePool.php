@@ -11,8 +11,8 @@
 
 namespace KCMUS\Bundle\CacheBundle\Cache;
 
-use Aequasi\Cache\CacheItem;
-use Aequasi\Cache\CachePool;
+use KCMUS\Cache\CacheItem;
+use KCMUS\Cache\CachePool;
 use Psr\Cache\CacheItemInterface;
 
 /**
