@@ -6,7 +6,7 @@
  * @license   http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0
  */
 
-namespace Aequasi\Bundle\CacheBundle\Command;
+namespace KCMUS\Bundle\CacheBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Aequasi\Bundle\CacheBundle\Service\CacheService;

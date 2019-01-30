@@ -6,7 +6,7 @@
  * @license   http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0
  */
 
-namespace Aequasi\Bundle\CacheBundle\DependencyInjection\Builder;
+namespace KCMUS\Bundle\CacheBundle\DependencyInjection\Builder;
 
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 use Symfony\Component\DependencyInjection\Alias;

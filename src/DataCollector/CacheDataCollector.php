@@ -6,7 +6,7 @@
  * @license   http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0
  */
 
-namespace Aequasi\Bundle\CacheBundle\DataCollector;
+namespace KCMUS\Bundle\CacheBundle\DataCollector;
 
 use Aequasi\Bundle\CacheBundle\Service\CacheService;
 use Symfony\Component\HttpFoundation\Request;

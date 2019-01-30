@@ -6,7 +6,7 @@
  * @copyright Underground Elephant
  */
 
-namespace Aequasi\Bundle\CacheBundle\Tests\DependencyInjection;
+namespace KCMUS\Bundle\CacheBundle\Tests\DependencyInjection;
 
 use Aequasi\Bundle\CacheBundle\Tests\TestCase;
 

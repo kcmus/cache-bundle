@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE
  */
 
-namespace Aequasi\Bundle\CacheBundle\Cache;
+namespace KCMUS\Bundle\CacheBundle\Cache;
 
 use Aequasi\Cache\CacheItem;
 use Aequasi\Cache\CachePool;
