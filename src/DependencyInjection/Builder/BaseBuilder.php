@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * Class BaseBuilder
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 abstract class BaseBuilder
 {
@@ -37,7 +37,7 @@ abstract class BaseBuilder
      */
     protected function getAlias()
     {
-        return 'aequasi_cache';
+        return 'kcmus_cache';
     }
 
     /**

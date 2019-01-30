@@ -11,7 +11,7 @@ namespace KCMUS\Bundle\CacheBundle\Cache;
 /**
  * Class Memcached
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class Memcached extends \Memcached
 {

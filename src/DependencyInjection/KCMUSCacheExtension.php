@@ -1,7 +1,6 @@
 <?php
 
 /**
- * @author    Aaron Scherer <aequasi@gmail.com>
  * @date      2013
  * @license   http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0
  */
@@ -14,17 +13,18 @@ use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
- * Class AequasiCacheExtension
+ * Class KCMUSCacheExtension
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
-class AequasiCacheExtension extends Extension
+class KCMUSCacheExtension extends Extension
 {
     /**
      * Loads the configs for Cache and puts data into the container
      *
      * @param array            $configs   Array of configs
      * @param ContainerBuilder $container Container Object
+     * @throws \Exception
      */
     public function load(array $configs, ContainerBuilder $container)
     {

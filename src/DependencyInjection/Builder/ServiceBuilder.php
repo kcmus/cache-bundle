@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\Reference;
 /**
  * Class ServiceBuilder
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class ServiceBuilder extends BaseBuilder
 {
@@ -31,7 +31,7 @@ class ServiceBuilder extends BaseBuilder
             'connect' => 'addServer'
         ),
         'memcached' => array(
-            'class' => 'Aequasi\Bundle\CacheBundle\Cache\Memcached',
+            'class' => 'KCMUS\Bundle\CacheBundle\Cache\Memcached',
             'connect' => 'addServer'
         ),
         'redis' => array(
@@ -95,7 +95,7 @@ class ServiceBuilder extends BaseBuilder
         $service  =
             $this->container->setDefinition(
                 $this->getAlias() . '.instance.' . $name,
-                new Definition($this->container->getParameter('aequasi_cache.service.class'))
+                new Definition($this->container->getParameter('kcmus_cache.service.class'))
             )
                 ->addMethodCall('setCache', array(new Reference($coreName)))
                 ->addMethodCall('setLogging', array($this->container->getParameter('kernel.debug')));

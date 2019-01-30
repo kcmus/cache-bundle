@@ -14,7 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * Class BaseCompilerPass
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 abstract class BaseCompilerPass implements CompilerPassInterface
 {
@@ -38,7 +38,7 @@ abstract class BaseCompilerPass implements CompilerPassInterface
      */
     protected function getAlias()
     {
-        return 'aequasi_cache';
+        return 'kcmus_cache';
     }
 
     /**

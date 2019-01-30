@@ -8,7 +8,7 @@
 
 namespace KCMUS\Bundle\CacheBundle\Tests;
 
-use KCMUS\Bundle\CacheBundle\DependencyInjection\AequasiCacheExtension;
+use KCMUS\Bundle\CacheBundle\DependencyInjection\KCMUSCacheExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -17,7 +17,7 @@ use Symfony\Component\Config\FileLocator;
 /**
  * Class TestCase
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class TestCase extends \PHPUnit_Framework_TestCase
 {
@@ -61,7 +61,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
     protected function createContainerFromFile($file, $data = array())
     {
         $container = $this->createContainer($data);
-        $container->registerExtension(new AequasiCacheExtension());
+        $container->registerExtension(new KCMUSCacheExtension());
         $this->loadFromFile($container, $file);
 
         $container->getCompilerPassConfig()

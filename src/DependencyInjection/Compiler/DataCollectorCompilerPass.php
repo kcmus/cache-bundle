@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Reference;
 /**
  * Class DataCollectorCompilerPass
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class DataCollectorCompilerPass extends BaseCompilerPass
 {

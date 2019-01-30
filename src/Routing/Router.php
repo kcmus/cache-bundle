@@ -17,7 +17,7 @@ use KCMUS\Bundle\CacheBundle\Service\CacheService;
 /**
  * Class Router
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class Router extends BaseRouter
 {
@@ -55,11 +55,11 @@ class Router extends BaseRouter
      */
     private function initializeCache()
     {
-        $config   = $this->container->getParameter('aequasi_cache.router');
+        $config   = $this->container->getParameter('kcmus_cache.router');
         $instance = $config['instance'];
 
         /** @var CacheService $cache */
-        $this->cache = $this->container->get('aequasi_cache.instance.' . $instance);
+        $this->cache = $this->container->get('kcmus_cache.instance.' . $instance);
     }
 
     /**

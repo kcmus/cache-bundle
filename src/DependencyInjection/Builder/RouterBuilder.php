@@ -13,7 +13,7 @@ use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 /**
  * Class RouterBuilder
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class RouterBuilder extends BaseBuilder
 {
@@ -56,6 +56,6 @@ class RouterBuilder extends BaseBuilder
             ));
         }
 
-        $this->container->setParameter('router.class', 'Aequasi\Bundle\CacheBundle\Routing\Router');
+        $this->container->setParameter('router.class', 'KCMUS\Bundle\CacheBundle\Routing\Router');
     }
 }

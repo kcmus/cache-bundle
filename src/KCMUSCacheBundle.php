@@ -1,7 +1,6 @@
 <?php
 
 /**
- * @author    Aaron Scherer <aequasi@gmail.com>
  * @date      2013
  * @license   http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0
  */
@@ -15,7 +14,7 @@ use KCMUS\Bundle\CacheBundle\DependencyInjection\Compiler;
 /**
  * Class KCMUSCacheBundle
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class KCMUSCacheBundle extends Bundle
 {

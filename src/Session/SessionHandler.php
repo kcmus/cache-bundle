@@ -1,7 +1,6 @@
 <?php
 
 /**
- * @author    Aaron Scherer <aequasi@gmail.com>
  * @date      2013
  * @license   http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0
  */
@@ -13,7 +12,7 @@ use Doctrine\Common\Cache\Cache;
 /**
  * Class SessionHandler
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class SessionHandler implements \SessionHandlerInterface
 {

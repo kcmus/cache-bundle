@@ -3,7 +3,6 @@
 /**
  * This file is part of cache-bundle
  *
- * (c) Aaron Scherer <aequasi@gmail.com>
  *
  * This source file is subject to the license that is bundled
  * with this source code in the file LICENSE
@@ -16,7 +15,7 @@ use KCMUS\Cache\CachePool;
 use Psr\Cache\CacheItemInterface;
 
 /**
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class LoggingCachePool extends CachePool
 {

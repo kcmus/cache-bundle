@@ -44,7 +44,7 @@ $bundles(
 Then add parameters (probably in config.yml) for your servers, and options
 
 ```yml
-aequasi_cache:
+kcmus_cache:
     instances:
         default:
           persistent: true # Boolean or persistent_id
@@ -54,7 +54,7 @@ aequasi_cache:
               - { host: localhost, port: 11211 }
 ```
 
-To see all the config options, run `php app/console config:dump-reference aequasi_cache` to view the config settings
+To see all the config options, run `php app/console config:dump-reference kcmus_cache` to view the config settings
 
 
 #### Doctrine
@@ -64,7 +64,7 @@ This bundle allows you to use its services for Doctrine's caching methods of met
 If you want doctrine to use this as the result and query cache, add this
 
 ```yml
-aequasi_cache:
+kcmus_cache:
     doctrine:
         enabled: true
         metadata:
@@ -84,7 +84,7 @@ aequasi_cache:
 This bundle even allows you to store your session data in one of your cache clusters. To enable:
 
 ```yml
-aequasi_cache:
+kcmus_cache:
     session:
         enabled: true
         instance: default
@@ -97,7 +97,7 @@ aequasi_cache:
 This bundle also provides router caching, to help speed that section up. To enable:
 
 ```yml
-aequasi_cache:
+kcmus_cache:
     router:
         enabled: true
         instance: default
@@ -112,15 +112,15 @@ To use this with doctrine's entity manager, just make sure you have `useResultCa
 
 ```php
 // Change default to the name of your instance
-$cache = $container->get( 'aequasi_cache.instance.default' );
+$cache = $container->get( 'kcmus_cache.instance.default' );
 // Or
-$cache = $container->get( 'aequasi_cache.default' );
+$cache = $container->get( 'kcmus_cache.default' );
 ```
 
 Here is an example usage of the service:
 
 ```php
-$cache = $this->get( 'aequasi_cache.instance.default' );
+$cache = $this->get( 'kcmus_cache.instance.default' );
 $key = 'test';
 if( $data = $cache->fetch( $key ) ) {
     print_r( $data );
@@ -134,7 +134,7 @@ if( $data = $cache->fetch( $key ) ) {
 There is also the `cache()` function on the service that allows you to wrap the above, into a single function:
 
 ```php
-$cache = $this->get( 'aequasi_cache.instance.default' );
+$cache = $this->get( 'kcmus_cache.instance.default' );
 $user = $cache->cache( 'test', function() use( $em ) { return $em->find( "AcmeDemoBundle:User", 1 ); }, 3600 );
 var_dump( $user );
 ```

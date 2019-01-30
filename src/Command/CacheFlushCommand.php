@@ -17,7 +17,7 @@ use Symfony\Component\Console\Input\InputArgument;
 /**
  * Class CacheFlushCommand
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class CacheFlushCommand extends ContainerAwareCommand
 {
@@ -37,7 +37,7 @@ class CacheFlushCommand extends ContainerAwareCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $serviceName = 'aequasi_cache.instance.' . $input->getArgument('instance');
+        $serviceName = 'kcmus_cache.instance.' . $input->getArgument('instance');
 
         /** @var CacheService $service */
         $service = $this->getContainer()->get($serviceName);

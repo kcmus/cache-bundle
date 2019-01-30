@@ -1,4 +1,4 @@
-aequasi_cache:
+kcmus_cache:
     instances:
         memcached:
             type: memcached

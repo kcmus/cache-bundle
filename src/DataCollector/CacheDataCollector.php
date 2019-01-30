@@ -16,7 +16,7 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 /**
  * Class CacheDataCollector
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class CacheDataCollector extends DataCollector
 {

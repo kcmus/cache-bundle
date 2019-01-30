@@ -13,13 +13,13 @@ use Doctrine\Common\Cache\Cache;
 /**
  * Class CacheService
  *
- * @package Aequasi\Bundle\CacheBundle\Service
+ * @package KCMUS\Bundle\CacheBundle\Service
  * @method boolean flushAll() flushAll() Flushes all cache entries
  * @method boolean deleteAll() deleteAll() Deletes all cache entries
  * @method string  getNamespace() getNamespace() Retrieves the namespace that prefixes all cache ids.
  * @method boolean setNamespace() setNamespace(string $namespace) Sets the namespace to prefix all cache ids with.
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class CacheService implements Cache
 {

@@ -14,7 +14,7 @@ use KCMUS\Bundle\CacheBundle\Service\CacheService;
 /**
  * Class CacheUrlMatcher
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class CacheUrlMatcher extends UrlMatcher
 {

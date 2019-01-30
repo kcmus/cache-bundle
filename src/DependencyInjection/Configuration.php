@@ -1,7 +1,6 @@
 <?php
 
 /**
- * @author    Aaron Scherer <aequasi@gmail.com>
  * @date      2013
  * @license   http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0
  */
@@ -15,7 +14,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 /**
  * Class Configuration
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class Configuration implements ConfigurationInterface
 {
@@ -226,7 +225,7 @@ class Configuration implements ConfigurationInterface
     }
 
     /**
-     * Configure the "aequasi_cache.session" section
+     * Configure the "kcmus_cache.session" section
      *
      * @return ArrayNodeDefinition
      */
@@ -253,7 +252,7 @@ class Configuration implements ConfigurationInterface
     }
 
     /**
-     * Configure the "aequasi_cache.doctrine" section
+     * Configure the "kcmus_cache.doctrine" section
      *
      * @return ArrayNodeDefinition
      */
@@ -314,7 +313,7 @@ class Configuration implements ConfigurationInterface
     }
 
     /**
-     * Configure the "aequasi_cache.router" section
+     * Configure the "kcmus_cache.router" section
      *
      * @return ArrayNodeDefinition
      */

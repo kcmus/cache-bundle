@@ -13,7 +13,7 @@ use KCMUS\Bundle\CacheBundle\Tests\TestCase;
 /**
  * Class AequasiCacheExtensionTest
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class AequasiCacheExtensionTest extends TestCase
 {
@@ -77,6 +77,6 @@ class AequasiCacheExtensionTest extends TestCase
      */
     private function getAlias()
     {
-        return 'aequasi_cache';
+        return 'kcmus_cache';
     }
 }

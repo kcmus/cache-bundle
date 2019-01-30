@@ -1,7 +1,6 @@
 <?php
 
 /**
- * @author    Aaron Scherer <aequasi@gmail.com>
  * @date      2013
  * @license   http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0
  */
@@ -15,7 +14,7 @@ use Symfony\Component\DependencyInjection\Reference;
 /**
  * Class SessionSupportCompilerPass
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class SessionSupportCompilerPass extends BaseCompilerPass
 {
@@ -29,7 +28,7 @@ class SessionSupportCompilerPass extends BaseCompilerPass
             return;
         }
 
-        // If the aequasi.cache.session_handler service is loaded set the alias
+        // If the kcmus.cache.session_handler service is loaded set the alias
         if ($this->container->hasParameter($this->getAlias() . '.session')) {
             $this->enableSessionSupport($this->container->getParameter($this->getAlias() . '.session'));
         }

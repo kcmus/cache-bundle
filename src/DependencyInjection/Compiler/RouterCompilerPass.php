@@ -1,7 +1,6 @@
 <?php
 
 /**
- * @author    Aaron Scherer <aequasi@gmail.com>
  * @date      2013
  * @license   http://www.apache.org/licenses/LICENSE-2.0.html Apache License, Version 2.0
  */
@@ -31,7 +30,7 @@ class RouterCompilerPass extends BaseCompilerPass
         $instance = $router['instance'];
 
         $def = $this->container->findDefinition('router');
-        $def->setClass('Aequasi\Bundle\CacheBundle\Routing\Router');
-        $def->addMethodCall('setCache', [new Reference(sprintf('aequasi_cache.instance.%s', $instance))]);
+        $def->setClass('KCMUS\Bundle\CacheBundle\Routing\Router');
+        $def->addMethodCall('setCache', [new Reference(sprintf('kcmus_cache.instance.%s', $instance))]);
     }
 }

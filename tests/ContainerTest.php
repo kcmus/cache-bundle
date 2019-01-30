@@ -11,7 +11,7 @@ namespace KCMUS\Bundle\CacheBundle\Tests;
 /**
  * Class ContainerTest
  *
- * @author Aaron Scherer <aequasi@gmail.com>
+ *
  */
 class ContainerTest extends TestCase
 {
