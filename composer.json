@@ -1,46 +1,30 @@
 {
-    "name":         "kcmus/cache-bundle",
-    "type":         "library",
-    "description":  "Creates services in Symfony 2, for cache, that can also be used with doctrines three cache types. It also provides functionality for session handler support, and Router support.",
-    "keywords":     [
-        "php",
-        "cache",
-        "redis",
-        "memcached"
-    ],
-    "homepage":     "https://github.com/aequasi/cache-bundle",
-    "license":      "Apache v2",
-    "authors":      [
+    "name": "aequasi/cache-bundle",
+    "type": "library",
+    "description": "Creates services in Symfony 2, for cache, that can also be used with doctrines three cache types (metadata, result, and query). It also provides functionality for session handler support, and Router support.",
+    "keywords": ["php", "cache", "redis", "memcached"],
+    "homepage": "https://github.com/aequasi/cache-bundle",
+    "license": "Apache v2",
+    "authors": [
         {
-            "name":     "Aaron Scherer",
-            "email":    "aequasi@gmail.com",
+            "name": "Aaron Scherer",
+            "email": "aequasi@gmail.com",
             "homepage": "https://github.com/aequasi"
         }
     ],
-    "support":      {
+    "support": {
         "email": "aequasi@gmail.com"
     },
-    "require":      {
-        "php":                           "^5.5|^7",
-        "symfony/framework-bundle":      "^2.7|^3.0",
-        "doctrine/cache":                "^1.3",
-        "cache/psr-6-doctrine-bridge":   "~3.0.1",
-        "psr/cache-implementation":      "~1.0"
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/symfony": ">=2.1.0",
+        "doctrine/cache": ">=1.3.0"
     },
-    "require-dev":  {
-        "phpunit/phpunit": "^5.1|^4.0"
-    },
-    "repositories": [
-        {
-            "type": "git",
-            "url":  "https://github.com/php-fig/cache.git"
-        }
-    ],
-    "suggest":      {
+    "suggest": {
         "ext-memcached": "Allows for caching with Memcached",
-        "ext-redis":     "Allows for caching with Redis"
+        "ext-redis": "Allows for caching with Redis"
     },
-    "autoload":     {
+    "autoload": {
         "psr-4": {
             "Aequasi\\Bundle\\CacheBundle\\": "src/"
         }

@@ -1,13 +1,19 @@
-# KCM Forked - Needs to be Deprecated
-
-This bundle has been replaced by [PHP-Cache](http://www.php-cache.com). Check it out!
-
 Aequasi cache-bundle [![Build Status](https://travis-ci.org/aequasi/cache-bundle.png?branch=master)](https://travis-ci.org/aequasi/cache-bundle)
-====================
+***
+
+##### Forked to KCMUS 
+https://github.com/aequasi/cache-bundle
+
+commit hash 04a0db97bd5edde4f77552be2a5510349ff2ba85
+
+Needs to be updated to use PHP-Cache
+***
 
 #### Cache Bundle for Symfony 2
 
 Creates services in Symfony 2, for cache, that can also be used with doctrines three cache types (metadata, result, and query). It also provides functionality for session handler support, and Router support.
+
+Should work in all versions of Symfony, and php 5.3
 
 The respective cache extensions will be required for your project.
 
@@ -15,15 +21,14 @@ Redis uses the php redis extension.
 
 #### Requirements
 
-- PHP >= 5.6, < 7.1
-- Symfony >= 2.7, < 4.0 
+- PHP 5.3.x or 5.4.x
 - [Composer](http://getcomposer.org)
 
 #### To Install
 
 Run the following in your project root, assuming you have composer set up for your project
 ```sh
-composer.phar require aequasi/cache-bundle
+composer.phar require aequasi/cache-bundle dev-master
 ```
 
 Add the bundle to app/AppKernel.php
@@ -116,16 +121,31 @@ Here is an example usage of the service:
 
 ```php
 $cache = $this->get( 'aequasi_cache.instance.default' );
-$item = $cache->getItem('test');
-if ($item->isHit()) {
-	var_dump($item->get());
-	
-	return;
+$key = 'test';
+if( $data = $cache->fetch( $key ) ) {
+    print_r( $data );
+} else {
+    /** @var $em \Doctrine\ORM\EntityManager */
+    $data = $em->find( 'AcmeDemoBundle:User', 1 );
+    $cache->save( $key, $data, 3600 );
 }
+```
 
-$cache->saveItem('test', $em->find('AcmeDemoBundle:User', 1), 3600);
+There is also the `cache()` function on the service that allows you to wrap the above, into a single function:
+
+```php
+$cache = $this->get( 'aequasi_cache.instance.default' );
+$user = $cache->cache( 'test', function() use( $em ) { return $em->find( "AcmeDemoBundle:User", 1 ); }, 3600 );
+var_dump( $user );
 ```
 
 ### Need Help?
 
-Create an issue if you've found a bug, or ping me on twitter: @aequasi
+Create an issue if you've found a bug,
+
+or email me at aequasi@gmail.com
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/aequasi/cache-bundle/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+

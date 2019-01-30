@@ -8,9 +8,8 @@
 
 namespace Aequasi\Bundle\CacheBundle\Routing\Matcher;
 
-use Aequasi\Cache\CachePool;
-use Psr\Cache\CacheItemPoolInterface;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
+use Aequasi\Bundle\CacheBundle\Service\CacheService;
 
 /**
  * Class CacheUrlMatcher
@@ -19,10 +18,8 @@ use Symfony\Component\Routing\Matcher\UrlMatcher;
  */
 class CacheUrlMatcher extends UrlMatcher
 {
-    const CACHE_LIFETIME = 604800; // a week
-
     /**
-     * @var CacheItemPoolInterface
+     * @var CacheService
      */
     protected $cache;
 
@@ -33,32 +30,27 @@ class CacheUrlMatcher extends UrlMatcher
      */
     public function match($pathInfo)
     {
-        $host   = strtr($this->context->getHost(), '.', '_');
-        $method = strtolower($this->context->getMethod());
-        $key    = 'route_' . $method . '_' . $host . '_' . $pathInfo;
-
-        if ($this->cache->hasItem($key)) {
-            return $this->cache->getItem($key)->get();
+        $key = 'route_' . $pathInfo;
+        if ($this->cache->contains($key)) {
+            return $this->cache->fetch($key);
         }
 
         $match = parent::match($pathInfo);
-        $item = $this->cache->getItem($key);
-            $item->set($match)
-                ->expiresAfter(self::CACHE_LIFETIME);
+        $this->cache->save($key, $match, 60 * 60 * 24 * 7);
 
         return $match;
     }
 
     /**
-     * @param CacheItemPoolInterface $cache
+     * @param CacheService $cache
      */
-    public function setCache(CacheItemPoolInterface $cache)
+    public function setCache($cache)
     {
         $this->cache = $cache;
     }
 
     /**
-     * @return CacheItemPoolInterface
+     * @return CacheService
      */
     public function getCache()
     {

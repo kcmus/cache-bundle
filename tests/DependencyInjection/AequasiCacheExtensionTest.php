@@ -9,8 +9,6 @@
 namespace Aequasi\Bundle\CacheBundle\Tests\DependencyInjection;
 
 use Aequasi\Bundle\CacheBundle\Tests\TestCase;
-use Aequasi\Cache\DoctrineCacheBridge;
-use Psr\Cache\CacheItemPoolInterface;
 
 /**
  * Class AequasiCacheExtensionTest
@@ -27,18 +25,33 @@ class AequasiCacheExtensionTest extends TestCase
     {
         $container = $this->createContainerFromFile('service');
 
-        $this->assertTrue($container->hasDefinition($this->getAlias().'.instance.default'));
-        $this->assertTrue($container->hasAlias($this->getAlias().'.default'));
+        $config = $container->getParameter($this->getAlias() . '.instance');
 
-        $this->assertInstanceOf(
-            CacheItemPoolInterface::class,
-            $container->get($this->getAlias().'.instance.default')
-        );
+        foreach (array('memcached', 'redis') as $type) {
 
-        $this->assertInstanceOf(
-            DoctrineCacheBridge::class,
-            $container->get($this->getAlias().'.instance.default.bridge')
-        );
+            $this->assertTrue(isset($config[$type]));
+
+            $this->assertTrue($container->hasDefinition($this->getAlias() . '.instance.' . $type));
+            $this->assertTrue($container->hasAlias($this->getAlias() . '.' . $type));
+
+            $this->assertInstanceOf(
+                'Aequasi\Bundle\CacheBundle\Service\CacheService',
+                $container->get($this->getAlias() . '.instance.' . $type)
+            );
+            $this->assertInstanceOf(
+                'Doctrine\Common\Cache\Cache',
+                $container->get($this->getAlias() . '.instance.' . $type)
+                    ->getCache()
+            );
+
+            $function = 'get' . ucwords($type);
+            $this->assertInstanceOf(
+                ucwords($type),
+                $container->get($this->getAlias() . '.instance.' . $type)
+                    ->getCache()
+                    ->{$function}()
+            );
+        }
     }
 
     /**
@@ -48,7 +61,7 @@ class AequasiCacheExtensionTest extends TestCase
     {
         $container = $this->createContainerFromFile('router');
 
-        $config = $container->getParameter($this->getAlias().'.router');
+        $config = $container->getParameter($this->getAlias() . '.router');
 
         $this->assertTrue(isset($config['enabled']));
         $this->assertTrue(isset($config['instance']));

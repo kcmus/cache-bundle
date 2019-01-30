@@ -55,7 +55,7 @@ class DoctrineSupportCompilerPass extends BaseCompilerPass
                         $cacheType
                     ));
                 }
-                $cacheDefinitionName = sprintf('%s.instance.%s.bridge', $this->getAlias(), $cacheData['instance']);
+                $cacheDefinitionName = sprintf('%s.instance.%s', $this->getAlias(), $cacheData['instance']);
 
                 foreach ($cacheData[$type] as $manager) {
                     $doctrineDefinitionName =
@@ -65,8 +65,6 @@ class DoctrineSupportCompilerPass extends BaseCompilerPass
                             $manager,
                             $cacheType
                         );
-
-                    // Replace the doctrine entity manager cache with our bridge
                     $this->container->setAlias($doctrineDefinitionName, $cacheDefinitionName);
                 }
             }
