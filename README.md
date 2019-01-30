@@ -1,4 +1,4 @@
-# This Bundle is Deprecated
+# KCM Forked - Needs to be Deprecated
 
 This bundle has been replaced by [PHP-Cache](http://www.php-cache.com). Check it out!
 
